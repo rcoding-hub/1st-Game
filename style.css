@@ -1,0 +1,57 @@
+/* Alles mittig auf der Seite */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container für alles */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+/* Überschrift */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Buttons nebeneinander */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button.wahl {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  background: #f0f0f0;
+}
+
+button.wahl:hover {
+  transform: scale(1.1);
+  background: #d0e6ff;
+}
+
+/* Ergebnisbox */
+#ergebnis {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  min-height: 30px;
+}
