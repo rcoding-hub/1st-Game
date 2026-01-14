@@ -55,3 +55,23 @@ button.wahl:hover {
   color: #333;
   min-height: 30px;
 }
+
+.color-option {
+    width: 50px;  /* Größere Breite */
+    height: 50px; /* Größere Höhe */
+    border: 2px solid #000;
+    cursor: pointer;
+    margin: 2px; /* Abstand zwischen den Farben */
+    transition: transform 0.2s; /* Optional: Hover-Effekt */
+}
+.color-option:hover {
+    transform: scale(1.1); /* Leichter Vergrößerungseffekt beim Hovern */
+}
+
+#canvas {
+    display: grid;
+    gap: 0;
+    margin: 20px auto;
+    width: fit-content;
+    border: 1px solid #000;
+}

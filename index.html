@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Schere-Stein-Papier Titel</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Place</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #canvas {
+        display: grid;
+        grid-template-columns: repeat(32, 20px); /* 32 Spalten, jede 20px breit */
+        gap: 0;
+        margin: 20px auto;
+        width: fit-content;
+        border: 1px solid #000; /* Optional: Rahmen um das Canvas */
+    }
+        .pixel {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        #color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 20px 0;
+        }
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+        .selected {
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Schere-Stein-Papier</h1>
+    <h1>R's Place</h1>
+    <p>Klicke auf einen Pixel, um ihn zu ändern!</p>
+    <p>Das Ganze ist als Pixel-Art gedacht, nicht als Malfläche</p>
 
-    <!-- Buttons für die Auswahl -->
-    <div class="buttons">
-      <button class="wahl" data-wahl="Schere">Schere</button>
-      <button class="wahl" data-wahl="Stein">Stein</button>
-      <button class="wahl" data-wahl="Papier">Papier</button>
+    <!-- Farbrad und Hex-Anzeige -->
+    <div style="margin: 20px 0;">
+        <input type="color" id="color-picker" value="#ff0000" style="width: 50px; height: 50px;">
+        <span id="color-hex" style="margin-left: 10px; font-family: monospace;">#FF0000</span>
     </div>
 
-    <!-- Ergebnisanzeige -->
-    <div id="ergebnis"></div>
-  </div>
+    <!-- Farbpalette (nur ein Element!) -->
+    <div id="color-palette"></div>
 
-  <script src="script.js"></script>
+    <!-- Canvas für die Pixel -->
+    <div id="canvas"></div>
+
+    <script src="script.js"></script>
+
+    <!--<button id="preload-button">reset</button>-->
 </body>
 </html>
